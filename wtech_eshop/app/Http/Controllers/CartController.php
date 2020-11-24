@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Product;
+use App\Models\Product;
 use Illuminate\Http\Request;
-use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Support\Facades\Validator;
 
 class CartController extends Controller
@@ -14,18 +13,64 @@ class CartController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public static function delete_product($id)
+    {
+                    echo $id;
+                    $cart = session()->get('cart');
+                    if(isset($cart[$id])) {
+                        unset($cart[$id]);
+                        session()->put('cart', $cart);
+                    }
+                    session()->flash('success', 'Product removed successfully');
+
+                    return redirect()->back();
+
+    }
     public function index()
     {
-        $mightAlsoLike = Product::mightAlsoLike()->get();
-
-        return view('cart')->with([
-            'mightAlsoLike' => $mightAlsoLike,
-            'discount' => getNumbers()->get('discount'),
-            'newSubtotal' => getNumbers()->get('newSubtotal'),
-            'newTax' => getNumbers()->get('newTax'),
-            'newTotal' => getNumbers()->get('newTotal'),
-        ]);
+        return view('shop_cart_1');
     }
+    public function add_and_show(Product $product)
+    {
+        CartController::add_to_cart($product);
+
+        return view('shop_cart_1');
+    }
+
+    public static function add_to_cart(Product $product)
+    {
+
+         if(!session()->get('cart')) {
+                     $cart = [
+                             $product->id => [
+                                 "name" => $product->name,
+                                 "quantity" => 1,
+                                 "price" => $product->price,
+                                 "image" => $product->image
+                             ]
+                     ];
+                     session()->put('cart', $cart);
+                     return redirect()->back()->with('success');
+                 }
+
+         $cart = session()->get('cart');
+
+         // if cart not empty then check if this product exist then increment quantity
+                 if(isset($cart[$product->id])) {
+                     $cart[$product->id]['quantity']++;
+                     session()->put('cart', $cart);
+                     return redirect()->back()->with('success', 'Product added to cart successfully!');
+                 }
+                 // if item not exist in cart then add to cart with quantity = 1
+                 $cart[$product->id] = [
+                     "name" => $product->name,
+                     "quantity" => 1,
+                     "price" => $product->price,
+                     "image" => $product->image
+                 ];
+                 session()->put('cart', $cart);
+                 return redirect()->back()->with('success', 'Product added to cart successfully!');
+             }
 
     /**
      * Store a newly created resource in storage.

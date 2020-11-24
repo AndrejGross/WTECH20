@@ -4,57 +4,6 @@
 
 <div class="row">
 
-        <div class="col-md-2 col-sm-12" id="sticky-sidebar">
-
-            <nav class="" id="">
-                <div class="" id="sidebar">
-                    <p>Kategórie</p>
-                    <ul class="list-unstyled">
-                        <li class="active">
-                            <a href="#PCmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Počítače</a>
-                            <ul class="collapse" id="PCmenu">
-                                <li>
-                                    <a href="#">Kancelárske</a>
-                                </li>
-                                <li>
-                                    <a href="#">Herné</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="active">
-                            <a href="#NTBmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Netebooky</a>
-                            <ul class="collapse" id="NTBmenu">
-                                <li>
-                                    <a href="#">Kancelárske</a>
-                                </li>
-                                <li>
-                                    <a href="#">Herné</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#PRmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Príslušenstvo</a>
-                            <ul class="collapse" id="PRmenu">
-                                <li>
-                                    <a href="#">Monitory</a>
-                                </li>
-                                <li>
-                                    <a href="#">Klávesnice</a>
-                                </li>
-                                <li>
-                                    <a href="#">Myšky</a>
-                                </li>
-                                <li>
-                                    <a href="#">Sluchadlá</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-        <!-- !SIDEBAR ------------------------------------------------------------------------------------------------------------------------------------- !-->
-
         <!--  BREADCRUMB------------------------------------------------------------------------------------------------------------------------------------- !-->
         <div class="col" id="main">
             <nav aria-label="breadcrumb">
@@ -68,8 +17,8 @@
                 <h1 class="">Počítače</h1>
                 <hr class="">
                 <p>U nás predávame len tie najkvalitnejšie produkty, ktoré boli otestované špecialistami a uisťujeme sa, aby čo najviac vyhovovali naším zákazníkom.</p>
-                <a class="btn btn-primary" href="#" role="button">Herné PC</a>
-                <a class="btn btn-primary ml-5" href="#" role="button">Kancelárske PC</a>
+                <a class="btn btn-primary" href="{{ route('shop-pc-gaming') }}" role="button">Herné PC</a>
+                <a class="btn btn-primary ml-5" href="{{ route('shop-pc-office') }}" role="button">Kancelárske PC</a>
             </div>
         </div>
     </div>
@@ -180,10 +129,10 @@
                 </p>
                 <hr>
                 <h6 class="mb-3">{{$product->price}} €</h6>
-                <button type="button" class="btn btn-primary btn-sm mr-1 mb-2"><i
-                            class="fa fa-shopping-cart pr-2"></i>Pridať do košíka</button>
-                <button type="button" class="btn btn-light btn-sm mr-1 mb-2"><i
-                            class="fa fa-info-circle pr-2"></i>Details</button>
+                <button type="button" class="btn btn-primary btn-sm mr-1 mb-2" onclick="window.location='{{ route('cart-add', $product) }}'">
+                <i class="fa fa-shopping-cart pr-2"></i>Pridať do košíka</button>
+                <button type="button" class="btn btn-light btn-sm mr-1 mb-2" onclick="window.location='{{ route('product-detail', $product) }}'"><i
+                            class="fa fa-info-circle pr-2"></i>Detail</button>
                 </div>
         </div>
         @endforeach
@@ -195,19 +144,7 @@
         <nav aria-label="Page navigation example">
             <ul class="pagination justify-content-center my-4">
                 <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                </li>
-                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                <li class="page-item disabled"><a class="page-link" href="#">2</a></li>
-                <li class="page-item disabled"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                        <span class="sr-only">Next</span>
-                    </a>
+                  {{ $products->onEachSide(5)->links() }}
                 </li>
             </ul>
         </nav>

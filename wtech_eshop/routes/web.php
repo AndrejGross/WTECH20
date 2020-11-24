@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,27 +14,19 @@ use Illuminate\Support\Facades\Auth;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::resource('users', 'UserController');
-
 Route::get('/', function () {
     return view('home_page');
 });
 
-Route::auth();
-/*
-Route::get('/cart', 'CartController@index')->name('cart.index');
-Route::post('/cart/{product}', 'CartController@store')->name('cart.store');
-Route::patch('/cart/{product}', 'CartController@update')->name('cart.update');
-Route::delete('/cart/{product}', 'CartController@destroy')->name('cart.destroy');
-*/
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/shop/pc', [App\Http\Controllers\ShopPcController::class, 'index'])->name('shop-pc');
+Route::get('/shop/pc/gaming', [App\Http\Controllers\ShopPcController::class, 'index'])->name('shop-pc-gaming');
+Route::get('/shop/pc/office', [App\Http\Controllers\ShopPcController::class, 'index'])->name('shop-pc-office');
+Route::get('/cart/index', [App\Http\Controllers\CartController::class, 'index'])->name('cart-index');
+Route::get('/shop/{product}', [App\Http\Controllers\ShopController::class, 'show_product_detail'])->name('product-detail');
+Route::get('/cart/added/{product}', [App\Http\Controllers\CartController::class, 'add_and_show'])->name('cart-addshow');
+Route::get('/cart/{product}', [App\Http\Controllers\CartController::class, 'add_to_cart'])->name('cart-add');
+Route::delete('/cart/{id}', [App\Http\Controllers\CartController::class, 'delete_product'])->name('cart-delete');
+Route::get('/search', [App\Http\Controllers\CartController::class, 'delete_session_data'])->name('search');
 
-Route::get('/shop', [App\Http\Controllers\PCShopController::class, 'index'])->name('shop');
-Route::middleware('auth')->group(function () {
-    //Route::get('/my-profile', 'UsersController@edit')->name('users.edit');
-    //Route::patch('/my-profile', 'UsersController@update')->name('users.update');
-
-    //Route::get('/my-orders', 'OrdersController@index')->name('orders.index');
-    //Route::get('/my-orders/{order}', 'OrdersController@show')->name('orders.show');
-});
+Route::auth();
