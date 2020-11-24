@@ -27,6 +27,8 @@ Route::get('/shop/{product}', [App\Http\Controllers\ShopController::class, 'show
 Route::get('/cart/added/{product}', [App\Http\Controllers\CartController::class, 'add_and_show'])->name('cart-addshow');
 Route::get('/cart/{product}', [App\Http\Controllers\CartController::class, 'add_to_cart'])->name('cart-add');
 Route::delete('/cart/{id}', [App\Http\Controllers\CartController::class, 'delete_product'])->name('cart-delete');
+Route::get('/cart/2', [App\Http\Controllers\CartController::class, 'index_2'])->name('cart-2');
+Route::get('/cart/3', [App\Http\Controllers\CartController::class, 'index_3'])->name('cart-3');
 Route::get('/search', [App\Http\Controllers\CartController::class, 'delete_session_data'])->name('search');
 
 Route::auth();

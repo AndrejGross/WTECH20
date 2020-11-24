@@ -20,24 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8ef57dc-dc1e-4a6e-8ee6-1c2f38dca937" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ShopController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ShopController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ShopPcController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ShopPcController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/CategoriesTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/CategoriesTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/ProductsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/ProductsTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/UsersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/UsersTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/partials/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout/partials/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/partials/navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/--User.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/-User.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/shop_cart_1.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/shop_cart_1.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/shop_pc.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/shop_pc.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/shop_product_detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/shop_product_detail.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +86,7 @@
       <workItem from="1606059865701" duration="6709000" />
       <workItem from="1606083353014" duration="9662000" />
       <workItem from="1606128349254" duration="91000" />
-      <workItem from="1606128825969" duration="29363000" />
+      <workItem from="1606128825969" duration="31507000" />
     </task>
     <servers />
   </component>
