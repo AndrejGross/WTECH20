@@ -17,13 +17,8 @@
                 <h1 class="">Počítače</h1>
                 <hr class="">
                 <p>U nás predávame len tie najkvalitnejšie produkty, ktoré boli otestované špecialistami a uisťujeme sa, aby čo najviac vyhovovali naším zákazníkom.</p>
-<<<<<<< HEAD
                 <a class="btn btn-primary" href="{{ route('shop-pc-gaming', $id) }}" role="button">Herné PC</a>
                 <a class="btn btn-primary ml-5" href="{{ route('shop-pc-office', $id) }}" role="button">Kancelárske PC</a>
-=======
-                <a class="btn btn-primary" href="{{ route('shop-pc-gaming') }}" role="button">Herné PC</a>
-                <a class="btn btn-primary ml-5" href="{{ route('shop-pc-office') }}" role="button">Kancelárske PC</a>
->>>>>>> 561c475c3fff89721213e20f18eb3ea17a750ddf
             </div>
         </div>
     </div>

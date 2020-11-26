@@ -104,8 +104,7 @@
                             </li>
                         </ul>
 
-                        <button type="button" class="btn btn-primary btn-block" onclick="window.location='{{ route('cart-2', $product) }}'">
-                        Pokračovať k objednávke</button>
+                        <button type="button" class="btn btn-primary btn-block">Pokračovať k objednávke</button>
 
                     </div>
                 </div>

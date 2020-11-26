@@ -11,7 +11,6 @@ use Illuminate\Http\Request;
 
 class ShopController extends Controller
 {
-<<<<<<< HEAD
     public function show_product_detail(Product $product)
     {
         return view('shop_product_detail')->with(['product'=>$product]);
@@ -37,11 +36,6 @@ class ShopController extends Controller
 
         return view('shop_pc_office')->with(['products' => $products])->with(['id' => $id]);
     }
-=======
-    public function show_product_detail(Product $product){
-        return view('shop_product_detail')->with(['product'=>$product]);
-    }
->>>>>>> 561c475c3fff89721213e20f18eb3ea17a750ddf
 }
 /*public function search(Array $search)
 {
