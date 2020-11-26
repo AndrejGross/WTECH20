@@ -7,13 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-
+    protected $table = 'products';
     protected $fillable = ['quantity'];
 
 
-    public function categories()
+    public static function categories()
     {
-        return $this->belongsToMany('App\Models\Category');
+        return $this->belongsTo('App\Models\Category');
     }
 
     public function presentPrice()

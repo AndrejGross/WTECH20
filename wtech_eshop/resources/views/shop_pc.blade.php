@@ -17,8 +17,13 @@
                 <h1 class="">Počítače</h1>
                 <hr class="">
                 <p>U nás predávame len tie najkvalitnejšie produkty, ktoré boli otestované špecialistami a uisťujeme sa, aby čo najviac vyhovovali naším zákazníkom.</p>
+<<<<<<< HEAD
+                <a class="btn btn-primary" href="{{ route('shop-pc-gaming', $id) }}" role="button">Herné PC</a>
+                <a class="btn btn-primary ml-5" href="{{ route('shop-pc-office', $id) }}" role="button">Kancelárske PC</a>
+=======
                 <a class="btn btn-primary" href="{{ route('shop-pc-gaming') }}" role="button">Herné PC</a>
                 <a class="btn btn-primary ml-5" href="{{ route('shop-pc-office') }}" role="button">Kancelárske PC</a>
+>>>>>>> 561c475c3fff89721213e20f18eb3ea17a750ddf
             </div>
         </div>
     </div>
@@ -113,7 +118,6 @@
 
     <div class="row">
     @foreach($products as $product)
-        @foreach($product->categories as $category)
 
         <div class="col-lg-3 col-md-4 col-sm-6 col-12">
             <img class="img-fluid w-100"
@@ -123,7 +127,7 @@
 
             <div class="text-center">
                 <h5>{{$product->name}}</h5>
-                <p class="mb-2 text-muted text-uppercase small">{{$category->name}}</p>
+                <p class="mb-2 text-muted text-uppercase small">{{$product->category_id}}</p>
                 <p>
                     {{$product->description}}
                 </p>
@@ -135,7 +139,6 @@
                             class="fa fa-info-circle pr-2"></i>Detail</button>
                 </div>
         </div>
-        @endforeach
     @endforeach
 
 

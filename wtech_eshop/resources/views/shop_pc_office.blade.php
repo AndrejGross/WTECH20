@@ -165,207 +165,42 @@
     </div>
     <!-- !FILTER------------------------------------------------------------------------------------------------------------------------------------- !-->
 
-    <!-- PRODUCTS 1------------------------------------------------------------------------------------------------------------------------------------- !-->
     <div class="row">
+            @foreach($products as $product)
 
-        <div class="col-md-3 col-sm-6 col-12">
-            <img class="img-fluid w-100"
-                 src="https://zdnet4.cbsistatic.com/hub/i/r/2020/10/21/25999ae5-5538-41da-b025-eb44ce8b8c81/resize/1200xauto/b82044831c8ab0ed40a66911565aeb10/iphone-12-pro-max-blue-hero.png" alt="Sample">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                    <img class="img-fluid w-100"
+                         src="{{$product->image}}" alt="Obrazok">
 
-            <!--<h4 class="mb-0"><span class="badge badge-dark badge-pill badge-news">Sold out</span></h4> !-->
+                    <!--<h4 class="mb-0"><span class="badge badge-dark badge-pill badge-news">Sold out</span></h4> !-->
 
-            <div class="text-center">
-                <h5>Asus Z-120 </h5>
-                <p class="mb-2 text-muted text-uppercase small">Počítače</p>
-                <p>
-                    Z-120 je najmodernejší herný počítač z dieľne Asus - Republic of Gamers. Jeho grafický karta dosahuje
-                    výkon až taký, že ma jebne...
-                </p>
-                <hr>
-                <h6 class="mb-3">12.99 €</h6>
-                <button type="button" class="btn btn-primary btn-sm mr-1 mb-2"><i
-                        class="fa fa-shopping-cart pr-2"></i>Pridať do košíka</button>
-                <button type="button" class="btn btn-light btn-sm mr-1 mb-2"><i
-                        class="fa fa-info-circle pr-2"></i>Details</button>
-            </div>
-        </div>
-
-        <div class="col-md-3 col-sm-6 col-12">
-
-            <img class="img-fluid"
-                 src="https://zdnet4.cbsistatic.com/hub/i/r/2020/10/21/25999ae5-5538-41da-b025-eb44ce8b8c81/resize/1200xauto/b82044831c8ab0ed40a66911565aeb10/iphone-12-pro-max-blue-hero.png" alt="Sample">
-
-            <div class="text-center">
-                <h5>Asus Z-120 </h5>
-                <p class="mb-2 text-muted text-uppercase small">Počítače</p>
-                <p>
-                    Z-120 je najmodernejší herný počítač z dieľne Asus - Republic of Gamers. Jeho grafický karta dosahuje
-                    výkon až taký, že ma jebne...
-                </p>
-                <hr>
-                <h6 class="mb-3">12.99 €</h6>
-                <button type="button" class="btn btn-primary btn-sm mr-1 mb-2"><i
-                        class="fa fa-shopping-cart pr-2"></i>Pridať do košíka</button>
-                <button type="button" class="btn btn-light btn-sm mr-1 mb-2"><i
-                        class="fa fa-info-circle pr-2"></i>Details</button>
-            </div>
-        </div>
-
-        <div class="col-md-3 col-sm-6 col-12">
-
-            <img class="img-fluid"
-                 src="https://zdnet4.cbsistatic.com/hub/i/r/2020/10/21/25999ae5-5538-41da-b025-eb44ce8b8c81/resize/1200xauto/b82044831c8ab0ed40a66911565aeb10/iphone-12-pro-max-blue-hero.png" alt="Sample">
-
-            <div class="text-center">
-                <h5>Asus Z-120 </h5>
-                <p class="mb-2 text-muted text-uppercase small">Počítače</p>
-                <p>
-                    Z-120 je najmodernejší herný počítač z dieľne Asus - Republic of Gamers. Jeho grafický karta dosahuje
-                    výkon až taký, že ma jebne...
-                </p>
-                <hr>
-                <h6 class="mb-3">12.99 €</h6>
-                <button type="button" class="btn btn-primary btn-sm mr-1 mb-2"><i
-                        class="fa fa-shopping-cart pr-2"></i>Pridať do košíka</button>
-                <button type="button" class="btn btn-light btn-sm mr-1 mb-2"><i
-                        class="fa fa-info-circle pr-2"></i>Details</button>
-            </div>
-        </div>
-
-        <div class="col-md-3 col-sm-6 col-12">
-
-            <img class="img-fluid"
-                 src="https://zdnet4.cbsistatic.com/hub/i/r/2020/10/21/25999ae5-5538-41da-b025-eb44ce8b8c81/resize/1200xauto/b82044831c8ab0ed40a66911565aeb10/iphone-12-pro-max-blue-hero.png" alt="Sample">
-
-            <div class="text-center">
-                <h5>Asus Z-120 </h5>
-                <p class="mb-2 text-muted text-uppercase small">Počítače</p>
-                <p>
-                    Z-120 je najmodernejší herný počítač z dieľne Asus - Republic of Gamers. Jeho grafický karta dosahuje
-                    výkon až taký, že ma jebne...
-                </p>
-                <hr>
-                <h6 class="mb-3">12.99 €</h6>
-                <button type="button" class="btn btn-primary btn-sm mr-1 mb-2"><i
-                        class="fa fa-shopping-cart pr-2"></i>Pridať do košíka</button>
-                <button type="button" class="btn btn-light btn-sm mr-1 mb-2"><i
-                        class="fa fa-info-circle pr-2"></i>Details</button>
-            </div>
-        </div>
-
-    </div>
-    <!-- !PRODUCTS 1------------------------------------------------------------------------------------------------------------------------------------- !-->
-
-    <!-- PRODUCTS 2 ------------------------------------------------------------------------------------------------------------------------------------- !-->
-    <div class="row">
-
-        <div class="col-md-3 col-sm-6 col-12">
-            <img class="img-fluid w-100"
-                 src="https://zdnet4.cbsistatic.com/hub/i/r/2020/10/21/25999ae5-5538-41da-b025-eb44ce8b8c81/resize/1200xauto/b82044831c8ab0ed40a66911565aeb10/iphone-12-pro-max-blue-hero.png" alt="Sample">
-
-            <!--<h4 class="mb-0"><span class="badge badge-dark badge-pill badge-news">Sold out</span></h4> !-->
-
-            <div class="text-center">
-                <h5>Asus Z-120 </h5>
-                <p class="mb-2 text-muted text-uppercase small">Počítače</p>
-                <p>
-                    Z-120 je najmodernejší herný počítač z dieľne Asus - Republic of Gamers. Jeho grafický karta dosahuje
-                    výkon až taký, že ma jebne...
-                </p>
-                <hr>
-                <h6 class="mb-3">12.99 €</h6>
-                <button type="button" class="btn btn-primary btn-sm mr-1 mb-2"><i
-                        class="fa fa-shopping-cart pr-2"></i>Pridať do košíka</button>
-                <button type="button" class="btn btn-light btn-sm mr-1 mb-2"><i
-                        class="fa fa-info-circle pr-2"></i>Details</button>
-            </div>
-        </div>
-
-        <div class="col-md-3 col-sm-6 col-12">
-
-            <img class="img-fluid"
-                 src="https://zdnet4.cbsistatic.com/hub/i/r/2020/10/21/25999ae5-5538-41da-b025-eb44ce8b8c81/resize/1200xauto/b82044831c8ab0ed40a66911565aeb10/iphone-12-pro-max-blue-hero.png" alt="Sample">
-
-            <div class="text-center">
-                <h5>Asus Z-120 </h5>
-                <p class="mb-2 text-muted text-uppercase small">Počítače</p>
-                <p>
-                    Z-120 je najmodernejší herný počítač z dieľne Asus - Republic of Gamers. Jeho grafický karta dosahuje
-                    výkon až taký, že ma jebne...
-                </p>
-                <hr>
-                <h6 class="mb-3">12.99 €</h6>
-                <button type="button" class="btn btn-primary btn-sm mr-1 mb-2"><i
-                        class="fa fa-shopping-cart pr-2"></i>Pridať do košíka</button>
-                <button type="button" class="btn btn-light btn-sm mr-1 mb-2"><i
-                        class="fa fa-info-circle pr-2"></i>Details</button>
-            </div>
-        </div>
-
-        <div class="col-md-3 col-sm-6 col-12">
-
-            <img class="img-fluid"
-                 src="https://zdnet4.cbsistatic.com/hub/i/r/2020/10/21/25999ae5-5538-41da-b025-eb44ce8b8c81/resize/1200xauto/b82044831c8ab0ed40a66911565aeb10/iphone-12-pro-max-blue-hero.png" alt="Sample">
-
-            <div class="text-center">
-                <h5>Asus Z-120 </h5>
-                <p class="mb-2 text-muted text-uppercase small">Počítače</p>
-                <p>
-                    Z-120 je najmodernejší herný počítač z dieľne Asus - Republic of Gamers. Jeho grafický karta dosahuje
-                    výkon až taký, že ma jebne...
-                </p>
-                <hr>
-                <h6 class="mb-3">12.99 €</h6>
-                <button type="button" class="btn btn-primary btn-sm mr-1 mb-2"><i
-                        class="fa fa-shopping-cart pr-2"></i>Pridať do košíka</button>
-                <button type="button" class="btn btn-light btn-sm mr-1 mb-2"><i
-                        class="fa fa-info-circle pr-2"></i>Details</button>
-            </div>
-        </div>
-
-        <div class="col-md-3 col-sm-6 col-12">
-
-            <img class="img-fluid"
-                 src="https://zdnet4.cbsistatic.com/hub/i/r/2020/10/21/25999ae5-5538-41da-b025-eb44ce8b8c81/resize/1200xauto/b82044831c8ab0ed40a66911565aeb10/iphone-12-pro-max-blue-hero.png" alt="Sample">
-
-            <div class="text-center">
-                <h5>Asus Z-120 </h5>
-                <p class="mb-2 text-muted text-uppercase small">Počítače</p>
-                <p>
-                    Z-120 je najmodernejší herný počítač z dieľne Asus - Republic of Gamers. Jeho grafický karta dosahuje
-                    výkon až taký, že ma jebne...
-                </p>
-                <hr>
-                <h6 class="mb-3">12.99 €</h6>
-                <button type="button" class="btn btn-primary btn-sm mr-1 mb-2"><i
-                        class="fa fa-shopping-cart pr-2"></i>Pridať do košíka</button>
-                <button type="button" class="btn btn-light btn-sm mr-1 mb-2"><i
-                        class="fa fa-info-circle pr-2"></i>Details</button>
-            </div>
-        </div>
-
-    </div>
+                    <div class="text-center">
+                        <h5>{{$product->name}}</h5>
+                        <p class="mb-2 text-muted text-uppercase small">{{$product->category_id}}</p>
+                        <p>
+                            {{$product->description}}
+                        </p>
+                        <hr>
+                        <h6 class="mb-3">{{$product->price}} €</h6>
+                        <button type="button" class="btn btn-primary btn-sm mr-1 mb-2" onclick="window.location='{{ route('cart-add', $product) }}'">
+                        <i class="fa fa-shopping-cart pr-2"></i>Pridať do košíka</button>
+                        <button type="button" class="btn btn-light btn-sm mr-1 mb-2" onclick="window.location='{{ route('product-detail', $product) }}'"><i
+                                    class="fa fa-info-circle pr-2"></i>Detail</button>
+                        </div>
+                </div>
+            @endforeach
 
     <!-- PAGINATION ------------------------------------------------------------------------------------------------------------------------------------- !-->
 
-        <nav aria-label="Page navigation example">
-            <ul class="pagination justify-content-center my-4">
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                </li>
-                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                <li class="page-item disabled"><a class="page-link" href="#">2</a></li>
-                <li class="page-item disabled"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+        <div class="container">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center my-4">
+                    <li class="page-item">
+                      {{ $products->onEachSide(5)->links() }}
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
 
 @endsection

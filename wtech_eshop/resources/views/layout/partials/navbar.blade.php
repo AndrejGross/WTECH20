@@ -10,9 +10,15 @@
                         Kategórie
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+<<<<<<< HEAD
+                        <a class="dropdown-item" href="{{route('shop', 1)}}">Počítače</a>
+                        <a class="dropdown-item" href="{{route('shop', 2)}}">Notebooky</a>
+                        <a class="dropdown-item" href="{{route('shop', 3)}}">Príslušenstvo</a>
+=======
                         <a class="dropdown-item" href="{{route('shop-pc')}}">Počítače</a>
                         <a class="dropdown-item" href="#">Notebooky</a>
                         <a class="dropdown-item" href="#">Príslušenstvo</a>
+>>>>>>> 561c475c3fff89721213e20f18eb3ea17a750ddf
                     </div>
                 </li>
             </ul>

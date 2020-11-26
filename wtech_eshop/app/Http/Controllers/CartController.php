@@ -34,7 +34,11 @@ class CartController extends Controller
     {
         CartController::add_to_cart($product);
 
+<<<<<<< HEAD
+        return redirect()->route('cart-index');
+=======
         return view('shop_cart_1');
+>>>>>>> 561c475c3fff89721213e20f18eb3ea17a750ddf
     }
 
     public static function add_to_cart(Product $product)
