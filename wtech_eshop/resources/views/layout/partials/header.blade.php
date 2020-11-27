@@ -13,9 +13,10 @@
 
         </div>
         <div class="col-4 my-auto">
-            <form class="form-inline float-right">
-                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-success w-auto" type="submit" onclick="window.location='{{ route('search') }}'">Hľadať</button>
+            <form class="form-inline float-right" action="{{url('search')}}" method="post">
+                @csrf <!-- {{ csrf_field() }} -->
+                <input class="form-control" type="text" name="searchIt" placeholder="Čo hľadáte?" aria-label="Search">
+                <button class="btn btn-success w-auto" type="submit">Hľadať</button>
             </form>
         </div>
         <div class="col-2 my-auto">

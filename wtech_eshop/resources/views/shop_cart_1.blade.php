@@ -43,7 +43,26 @@
                                                 </div>
                                                 <div>
                                                     <div class="mb-0 w-100">
-                                                        <input class="quantity" min="0" name="quantity" value="{{ $details['quantity'] }}" type="number">
+                                                        <div class="table-responsive mb-2">
+                                                            <table class="table table-sm table-borderless">
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td class="pl-0 pb-0 w-25">Množstvo</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="pl-0">
+                                                                        <div class="def-number-input number-input safari_only mb-0">
+                                                                            <button onclick="window.location='{{ route('updateP', $details['id']) }}'"
+                                                                                    class="plus fa fa-plus"></button>
+                                                                            <input class="quantity" min="0" name="quantity" value="{{ $details['quantity'] }}" type="number">
+                                                                            <button onclick="window.location='{{ route('updateM', $details['id']) }}'"
+                                                                                    class="minus fa fa-minus"></button>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>

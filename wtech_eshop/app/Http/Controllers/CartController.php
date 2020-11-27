@@ -15,15 +15,15 @@ class CartController extends Controller
      */
     public static function delete_product($id)
     {
-                    echo $id;
-                    $cart = session()->get('cart');
-                    if(isset($cart[$id])) {
-                        unset($cart[$id]);
-                        session()->put('cart', $cart);
-                    }
-                    session()->flash('success', 'Product removed successfully');
+        echo $id;
+        $cart = session()->get('cart');
+        if(isset($cart[$id])) {
+            unset($cart[$id]);
+            session()->put('cart', $cart);
+        }
+        session()->flash('success', 'Product removed successfully');
 
-                    return redirect()->back();
+        return redirect()->back();
 
     }
     public function index()
@@ -43,6 +43,7 @@ class CartController extends Controller
          if(!session()->get('cart')) {
                      $cart = [
                              $product->id => [
+                                 "id" => $product->id,
                                  "name" => $product->name,
                                  "quantity" => 1,
                                  "price" => $product->price,
@@ -63,6 +64,7 @@ class CartController extends Controller
                  }
                  // if item not exist in cart then add to cart with quantity = 1
                  $cart[$product->id] = [
+                     "id" => $product->id,
                      "name" => $product->name,
                      "quantity" => 1,
                      "price" => $product->price,
@@ -101,25 +103,21 @@ class CartController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public static function updatePlus($id)
     {
-        $validator = Validator::make($request->all(), [
-            'quantity' => 'required|numeric|between:1,5'
-        ]);
+        $cart = session()->get('cart');
 
-        if ($validator->fails()) {
-            session()->flash('errors', collect(['Quantity must be between 1 and 5.']));
-            return response()->json(['success' => false], 400);
-        }
+        $cart[$id]['quantity']++;
+        session()->put('cart', $cart);
+        return redirect()->back()->with('success', 'Product added to cart successfully!');
+    }
+    public static function updateMinus($id)
+    {
+        $cart = session()->get('cart');
 
-        if ($request->quantity > $request->productQuantity) {
-            session()->flash('errors', collect(['We currently do not have enough items in stock.']));
-            return response()->json(['success' => false], 400);
-        }
-
-        Cart::update($id, $request->quantity);
-        session()->flash('success_message', 'Quantity was updated successfully!');
-        return response()->json(['success' => true]);
+        $cart[$id]['quantity']--;
+        session()->put('cart', $cart);
+        return redirect()->back()->with('success', 'Product added to cart successfully!');
     }
 
     /**

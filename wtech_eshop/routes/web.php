@@ -19,6 +19,10 @@ Route::get('/', function () {
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('/search', [App\Http\Controllers\ShopController::class, 'get_searched_products']);
+Route::get('/detail', [App\Http\Controllers\ShopController::class, 'product_detail']);
+Route::get('/updatePlus/{id}', [App\Http\Controllers\CartController::class, 'updatePlus'])->name('updateP');
+Route::get('/updateMinus/{id}', [App\Http\Controllers\CartController::class, 'updateMinus'])->name('updateM');
 Route::get('/shop/pc/{category}', [App\Http\Controllers\ShopController::class, 'index'])->name('shop');
 Route::get('/shop/pc_gaming/{category}', [App\Http\Controllers\ShopController::class, 'get_gaming_pc'])->name('shop-pc-gaming');
 Route::get('/shop/pc_office/{category}', [App\Http\Controllers\ShopController::class, 'get_office_pc'])->name('shop-pc-office');

@@ -81,14 +81,8 @@
                 <a href="#" class="text-reset float-left"><i class="fa fa-th-list fa-lg mr-1" data-toggle="collapse" data-target="#sidebar" aria-hidden="true" aria-expanded="false" aria-controls="sidebar" onclick="var that = this; setTimeout(function() {that.parentNode.style.flex = 'auto';that.parentNode.style['max-width'] = 'none';}, 2000);">Kategórie</i></a>
                 <label class="float-right">
                     <label>Zoradiť podľa</label>
-                    <select class="mdb-select md-outline md-form" searchable="Search here..">
-                        <option value="" disabled selected>Najpredávanejšie</option>
-                        <option value="1">TOP</option>
-                        <option value="2">Najpredávanejśie</option>
-                        <option value="3">Najdrahšie</option>
-                        <option value="4">Najlacnejšie</option>
-                    </select>
-                    <button class="btn btn-primary">Zobraziť</button>
+                    <button class="btn btn-primary" onclick="window.location='{{ route('shop-pc-gaming', [$id, 'sort' => 'high_low']) }}'" >Najdrahšie</button>
+                    <button class="btn btn-primary" onclick="window.location='{{ route('shop-pc-gaming', [$id, 'sort' => 'low_high']) }}'" >Najlacnejšie</button>
                 </label>
             </div>
 
@@ -101,62 +95,43 @@
     <div class="container position-absolute" style="z-index: 1;">
         <div class="row">
             <nav class="col-6 bg-secondary collapse" id="sidebar">
-                <section>
                     <section>
                         <h5>Filtrovať</h5>
-                        <section class="">
 
-                            <h6 class="font-weight-bold">Stav produktu</h6>
+                        <form method="GET" action="{{ route('shop-pc-gaming', $id)}}">
+                           @csrf
 
-                            <div class="form-check pl-0 mb-3 ml-4">
-                                <input type="checkbox" class="form-check-input filled-in" id="new">
-                                <label class="form-check-label small text-uppercase card-link-secondary" for="new">Všetko</label>
-                            </div>
-                            <div class="form-check pl-0 mb-3 ml-4">
-                                <input type="checkbox" class="form-check-input filled-in" id="used">
-                                <label class="form-check-label small text-uppercase card-link-secondary" for="used">Nové</label>
-                            </div>
-                            <div class="form-check pl-0 mb-3 ml-4">
-                                <input type="checkbox" class="form-check-input filled-in" id="collectible">
-                                <label class="form-check-label small text-uppercase card-link-secondary" for="collectible">Použité</label>
-                            </div>
-                        </section>
 
                         <section class="">
 
                             <h6 class="font-weight-bold">Značka</h6>
+                            <select class="mdb-select md-outline md-form w-50" searchable="Search here.." name="brand">
+                                <option value="Asus">Asus</option>
+                                <option value="Razer">Razer</option>
+                            </select>
 
-                            <div class="form-check pl-0 mb-3 ml-4">
-                                <input type="checkbox" class="form-check-input filled-in" id="gaming">
-                                <label class="form-check-label small text-uppercase card-link-secondary" for="gaming">Herné</label>
-                            </div>
-                            <div class="form-check pl-0 mb-3 ml-4">
-                                <input type="checkbox" class="form-check-input filled-in" id="office">
-                                <label class="form-check-label small text-uppercase card-link-secondary" for="office">Kancelárske</label>
-                            </div>
                         </section>
 
                         <section class="mb-4">
                             <h6 class="font-weight-bold">Cena</h6>
-                            <form>
+
                                 <div class="">
                                     <div class="md-form">
                                         <label for="from">Od:</label>
-                                        <input id="from" type="text" class="form-control mb-0">
+                                        <input id="from" type="text" class="form-control mb-0" name="price_from">
                                     </div>
                                     <div class="md-form md-outline my-0">
                                         <label for="to">Do:</label>
-                                        <input id="to" type="text" class="form-control mb-0">
+                                        <input id="to" type="text" class="form-control mb-0" name="price_to">
                                     </div>
                                 </div>
-                            </form>
 
                         </section>
 
-                        <button class="btn btn-primary mb-4">Použiť</button>
+                        <button type="submit" class="btn btn-primary mb-4">Použiť</button>
 
+                    </form>
                     </section>
-                </section>
             </nav>
 
             <div class="col-6 bg-dark">

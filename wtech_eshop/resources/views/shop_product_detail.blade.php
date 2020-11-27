@@ -18,7 +18,7 @@
 
     <!-- PRODUCT DETAIL------------------------------------------------------------------------------------------------------------------------------------- !-->
 
-    @foreach($product->categories as $category)
+
     <div class="row">
         <div class="col-md-6">
             <div id="product_carousel" class="carousel slide mt-2 mb-2" data-ride="carousel">
@@ -60,13 +60,10 @@
                 {{ $product->description }}
             </p>
 
+
             <div class="table-responsive">
                 <table class="table table-sm table-borderless mb-0">
                     <tbody>
-                    <tr>
-                        <th class="pl-0 w-25" scope="row"><strong>Kategória</strong></th>
-                        <td>{{ $category->name }}</td>
-                    </tr>
                     <tr>
                         <th class="pl-0 w-25" scope="row"><strong>Typ</strong></th>
                         <td>{{ $product->type }}</td>
@@ -75,15 +72,15 @@
                 </table>
             </div>
             <hr>
+             <div class="table-responsive mb-2">
 
-            <div class="table-responsive mb-2">
                 <button type="button" class="btn w-100 btn-primary btn-md" onclick="window.location='{{ route('cart-addshow', $product) }}'">Kúpiť</button>
-                            <button type="button" class="btn w-50 btn-light btn-md" onclick="window.location='{{ route('cart-add', $product) }}'"><i
-                                    class="fa fa-shopping-cart pr-2"></i>Pridať do košíka</button>
+                                <button type="button" class="btn w-50 btn-light btn-md" onclick="window.location='{{ route('cart-add', $product) }}'"><i
+                                                                class="fa fa-shopping-cart pr-2"></i>Pridať do košíka</button>
             </div>
+
         </div>
     </div>
-    @endforeach
 
     <!-- !PRODUCT DETAIL cards------------------------------------------------------------------------------------------------------------------------------------- !-->
     <div class="row">

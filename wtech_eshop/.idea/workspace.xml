@@ -52,18 +52,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\andre\OneDrive\Documents\STU_FIIT\SemEster_V\WT\wtech_eshop\app\Models" />
-      <recent name="C:\Users\andre\OneDrive\Documents\STU_FIIT\SemEster_V\WT\wtech_eshop\resources\views" />
-      <recent name="C:\Users\andre\OneDrive\Documents\STU_FIIT\SemEster_V\WT\wtech_eshop\resources\views\layout" />
-      <recent name="C:\Users\andre\OneDrive\Documents\STU_FIIT\SemEster_V\WT\wtech_eshop\app" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\andre\OneDrive\Documents\STU_FIIT\SemEster_V\WT\WTECH20-main\wtech_eshop" />
       <recent name="C:\Users\andre\OneDrive\Documents\STU_FIIT\SemEster_V\WT\wtech_eshop\resources\views\layout\partials" />
       <recent name="C:\Users\andre\OneDrive\Documents\STU_FIIT\SemEster_V\WT\wtech_eshop\resources\views" />
       <recent name="C:\Users\andre\OneDrive\Documents\STU_FIIT\SemEster_V\WT\wtech_eshop\database\migrations" />
       <recent name="C:\Users\andre\OneDrive\Documents\STU_FIIT\SemEster_V\WT\wtech_eshop\app\Http\Controllers" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\andre\OneDrive\Documents\STU_FIIT\SemEster_V\WT\WTECH20-main\wtech_eshop\resources\views" />
+      <recent name="C:\Users\andre\OneDrive\Documents\STU_FIIT\SemEster_V\WT\wtech_eshop\app\Models" />
+      <recent name="C:\Users\andre\OneDrive\Documents\STU_FIIT\SemEster_V\WT\wtech_eshop\resources\views" />
+      <recent name="C:\Users\andre\OneDrive\Documents\STU_FIIT\SemEster_V\WT\wtech_eshop\resources\views\layout" />
+      <recent name="C:\Users\andre\OneDrive\Documents\STU_FIIT\SemEster_V\WT\wtech_eshop\app" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -84,6 +85,8 @@
       <workItem from="1606206905974" duration="6325000" />
       <workItem from="1606333091930" duration="14990000" />
       <workItem from="1606352298088" duration="41000" />
+      <workItem from="1606393780682" duration="17339000" />
+      <workItem from="1606511705960" duration="997000" />
     </task>
     <servers />
   </component>
@@ -144,9 +147,9 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="616" y="250" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1606067045294" />
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1606345997137">
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1606400130176">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1606345997137" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1606400130176" />
   </component>
 </project>

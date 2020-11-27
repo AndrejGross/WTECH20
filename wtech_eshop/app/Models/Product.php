@@ -9,9 +9,9 @@ class Product extends Model
 {
     protected $table = 'products';
     protected $fillable = ['quantity'];
+    use Searchable;
 
-
-    public static function categories()
+    public function categories()
     {
         return $this->belongsTo('App\Models\Category');
     }
@@ -35,10 +35,6 @@ class Product extends Model
     {
         $array = $this->toArray();
 
-        $extraFields = [
-            'categories' => $this->categories->pluck('name')->toArray(),
-        ];
-
-        return array_merge($array, $extraFields);
+        return $array;
     }
 }

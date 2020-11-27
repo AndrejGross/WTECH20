@@ -8,18 +8,9 @@
         <div class="col" id="main">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Domov</a></li>
-                    <li class="breadcrumb-item"><a href="#">Počítače</a></li>
+
                 </ol>
             </nav>
-
-            <div class="jumbotron">
-                <h1 class="">Počítače</h1>
-                <hr class="">
-                <p>U nás predávame len tie najkvalitnejšie produkty, ktoré boli otestované špecialistami a uisťujeme sa, aby čo najviac vyhovovali naším zákazníkom.</p>
-                <a class="btn btn-primary" href="{{ route('shop-pc-gaming', $id) }}" role="button">Herné PC</a>
-                <a class="btn btn-primary ml-5" href="{{ route('shop-pc-office', $id) }}" role="button">Kancelárske PC</a>
-            </div>
         </div>
     </div>
     <!-- !BREADCRUMB------------------------------------------------------------------------------------------------------------------------------------- !-->
@@ -128,7 +119,7 @@
                 </p>
                 <hr>
                 <h6 class="mb-3">{{$product->price}} €</h6>
-                <button type="button" class="btn btn-primary btn-sm mr-1 mb-2" onclick="window.location='{{ route('cart-add', $product) }}'">
+                <button type="button" class="btn btn-primary btn-sm mr-1 mb-2" onclick="window.location='{{ route('cart-addshow', $product) }}'">
                 <i class="fa fa-shopping-cart pr-2"></i>Pridať do košíka</button>
                 <button type="button" class="btn btn-light btn-sm mr-1 mb-2" onclick="window.location='{{ route('product-detail', $product) }}'"><i
                             class="fa fa-info-circle pr-2"></i>Detail</button>
@@ -139,7 +130,7 @@
 
     <!-- PAGINATION ------------------------------------------------------------------------------------------------------------------------------------- !-->
     <div class="mx-auto">
-         {{ $products->onEachSide(5)->links() }}
+             {{ $products->onEachSide(5)->links() }}
     </div>
 
 @endsection
