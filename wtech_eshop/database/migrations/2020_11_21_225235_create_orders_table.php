@@ -24,15 +24,11 @@ class CreateOrdersTable extends Migration
             $table->string('billing_city')->nullable();
             $table->string('billing_postalcode')->nullable();
             $table->string('billing_phone')->nullable();
-            $table->string('billing_name_on_card')->nullable();
-            $table->integer('billing_discount')->default(0);
-            $table->string('billing_discount_code')->nullable();
             $table->integer('billing_subtotal');
-            $table->integer('billing_tax');
             $table->integer('billing_total');
-            $table->string('payment_gateway')->default('dobierka');
-            $table->boolean('shipped')->default(false);
-            $table->string('error')->nullable();
+            $table->string('payment');
+            $table->string('shipment');
+            $table->string('state')->default('prijaté');
             $table->timestamps();
         });
     }

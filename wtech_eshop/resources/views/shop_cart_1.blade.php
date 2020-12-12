@@ -123,7 +123,7 @@
                             </li>
                         </ul>
 
-                        <button type="button" class="btn btn-primary btn-block">Pokračovať k objednávke</button>
+                        <button type="button" onclick="window.location='{{ route('cart_2') }}'" class="btn btn-primary btn-block">Pokračovať k objednávke</button>
 
                     </div>
                 </div>

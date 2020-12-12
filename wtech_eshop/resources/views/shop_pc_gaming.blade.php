@@ -99,38 +99,36 @@
                         <h5>Filtrovať</h5>
 
                         <form method="GET" action="{{ route('shop-pc-gaming', $id)}}">
-                           @csrf
+                            @csrf
+                            <section class="">
 
+                                <h6 class="font-weight-bold">Značka</h6>
+                                <select class="mdb-select md-outline md-form w-50" searchable="Search here.." name="brand">
+                                    <option value="Asus">Asus</option>
+                                    <option value="Razer">Razer</option>
+                                </select>
 
-                        <section class="">
+                            </section>
 
-                            <h6 class="font-weight-bold">Značka</h6>
-                            <select class="mdb-select md-outline md-form w-50" searchable="Search here.." name="brand">
-                                <option value="Asus">Asus</option>
-                                <option value="Razer">Razer</option>
-                            </select>
+                            <section class="mb-4">
+                                <h6 class="font-weight-bold">Cena</h6>
 
-                        </section>
-
-                        <section class="mb-4">
-                            <h6 class="font-weight-bold">Cena</h6>
-
-                                <div class="">
-                                    <div class="md-form">
-                                        <label for="from">Od:</label>
-                                        <input id="from" type="text" class="form-control mb-0" name="price_from">
+                                    <div class="">
+                                        <div class="md-form">
+                                            <label for="from">Od:</label>
+                                            <input id="from" type="text" class="form-control mb-0" name="price_from">
+                                        </div>
+                                        <div class="md-form md-outline my-0">
+                                            <label for="to">Do:</label>
+                                            <input id="to" type="text" class="form-control mb-0" name="price_to">
+                                        </div>
                                     </div>
-                                    <div class="md-form md-outline my-0">
-                                        <label for="to">Do:</label>
-                                        <input id="to" type="text" class="form-control mb-0" name="price_to">
-                                    </div>
-                                </div>
 
-                        </section>
+                            </section>
 
-                        <button type="submit" class="btn btn-primary mb-4">Použiť</button>
+                            <button type="submit" class="btn btn-primary mb-4">Použiť</button>
 
-                    </form>
+                        </form>
                     </section>
             </nav>
 

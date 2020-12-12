@@ -40,69 +40,40 @@ class CartController extends Controller
     public static function add_to_cart(Product $product)
     {
 
-         if(!session()->get('cart')) {
-                     $cart = [
-                             $product->id => [
-                                 "id" => $product->id,
-                                 "name" => $product->name,
-                                 "quantity" => 1,
-                                 "price" => $product->price,
-                                 "image" => $product->image
-                             ]
-                     ];
-                     session()->put('cart', $cart);
-                     return redirect()->back()->with('success');
-                 }
+        if(!session()->get('cart')) {
+             $cart = [
+                     $product->id => [
+                         "id" => $product->id,
+                         "name" => $product->name,
+                         "quantity" => 1,
+                         "price" => $product->price,
+                         "image" => $product->image
+                     ]
+             ];
+             session()->put('cart', $cart);
+             return redirect()->back()->with('success');
+         }
 
          $cart = session()->get('cart');
 
-         // if cart not empty then check if this product exist then increment quantity
-                 if(isset($cart[$product->id])) {
-                     $cart[$product->id]['quantity']++;
-                     session()->put('cart', $cart);
-                     return redirect()->back()->with('success', 'Product added to cart successfully!');
-                 }
-                 // if item not exist in cart then add to cart with quantity = 1
-                 $cart[$product->id] = [
-                     "id" => $product->id,
-                     "name" => $product->name,
-                     "quantity" => 1,
-                     "price" => $product->price,
-                     "image" => $product->image
-                 ];
-                 session()->put('cart', $cart);
-                 return redirect()->back()->with('success', 'Product added to cart successfully!');
-             }
+        // if cart not empty then check if this product exist then increment quantity
+         if(isset($cart[$product->id])) {
+             $cart[$product->id]['quantity']++;
+             session()->put('cart', $cart);
+             return redirect()->back()->with('success', 'Product added to cart successfully!');
+         }
+         // if item not exist in cart then add to cart with quantity = 1
+         $cart[$product->id] = [
+             "id" => $product->id,
+             "name" => $product->name,
+             "quantity" => 1,
+             "price" => $product->price,
+             "image" => $product->image
+         ];
+         session()->put('cart', $cart);
+         return redirect()->back()->with('success', 'Product added to cart successfully!');
+     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Product  $product
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Product $product)
-    {
-        $duplicates = Cart::search(function ($cartItem, $rowId) use ($product) {
-            return $cartItem->id === $product->id;
-        });
-
-        if ($duplicates->isNotEmpty()) {
-            return redirect()->route('cart.index')->with('success_message', 'Item is already in your cart!');
-        }
-
-        Cart::add($product->id, $product->name, 1, $product->price)
-            ->associate('App\Product');
-
-        return redirect()->route('cart.index')->with('success_message', 'Item was added to your cart!');
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public static function updatePlus($id)
     {
         $cart = session()->get('cart');
@@ -111,6 +82,7 @@ class CartController extends Controller
         session()->put('cart', $cart);
         return redirect()->back()->with('success', 'Product added to cart successfully!');
     }
+
     public static function updateMinus($id)
     {
         $cart = session()->get('cart');
@@ -120,12 +92,19 @@ class CartController extends Controller
         return redirect()->back()->with('success', 'Product added to cart successfully!');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    public function get_cart_faze_3(request $request)
+    {
+        $shipment = $request->shipment;
+        $payment = $request->payment;
+
+        return view('shop_cart_3')->with('shipment', $shipment)->with('payment', $payment);
+    }
+
+    public static function cart_to_stage_two()
+    {
+        return view('shop_cart_2');
+    }
+
     public function destroy($id)
     {
         Cart::remove($id);

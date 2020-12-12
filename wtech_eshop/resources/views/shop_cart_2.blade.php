@@ -16,42 +16,43 @@
             <div class="col-lg-8">
                 <section>
                     <section>
-                        <section class="">
+                        <section>
 
-                            <h5 class="font-weight-bold">Zvoľte spôsob dopravy</h5>
+                            <h5 class="font-weight-bold">Zvoľte spôsob dopravy a platby</h5>
 
-                            <div class="form-check pl-0 mb-3 ml-4">
-                                <input type="checkbox" class="form-check-input filled-in" id="">
-                                <label class="form-check-label small text-uppercase card-link-secondary" for="">Osobné vyzdvihnutie na centrále</label>
-                            </div>
-                            <div class="form-check pl-0 mb-3 ml-4">
-                                <input type="checkbox" class="form-check-input filled-in" id="">
-                                <label class="form-check-label small text-uppercase card-link-secondary" for="">Kuriérom DPD</label>
-                            </div>
-                            <div class="form-check pl-0 mb-3 ml-4">
-                                <input type="checkbox" class="form-check-input filled-in" id="">
-                                <label class="form-check-label small text-uppercase card-link-secondary" for="">Kuriéom UPS</label>
-                            </div>
+                            <form method="GET" action="{{ route('cart-faze-2') }}">
+                               @csrf
+
+                                <section>
+                                    <h6 class="font-weight-bold mt-3">Spôsob dopravy</h6>
+                                    <select class="mdb-select md-outline md-form w-50" searchable="Search here.." name="shipment">
+                                        <option value="osobne_vyzdvihnutie">Vyzdvihnutie v predajni</option>
+                                        <option value="zasielkovna">Zásielkovňa</option>
+                                        <option value="kurier">Kuriérska služba</option>
+                                    </select>
+                                </section>
+
+                                <section class="mb-4">
+                                    <h6 class="font-weight-bold mt-3">Spôsob platby</h6>
+                                    <select class="mdb-select md-outline md-form w-50" searchable="Search here.." name="payment">
+                                        <option value="bankovy_prevod">Bankový prevod</option>
+                                        <option value="platba_kartou">Platba kartou</option>
+                                        <option value="dobierka">Dobierka</option>
+                                        <option value="paypal">Paypal</option>
+                                    </select>
+                                </section>
+
+
                         </section>
-
-                        <section class="mb-4">
-                            <h6 class="font-weight-bold">Zvoľte spôsob platby</h6>
-                            <div class="form-check pl-0 mb-3 ml-4">
-                                <input type="checkbox" class="form-check-input filled-in" id="">
-                                <label class="form-check-label small text-uppercase card-link-secondary" for="">Bankovým prevodom</label>
-                            </div>
-                            <div class="form-check pl-0 mb-3 ml-4">
-                                <input type="checkbox" class="form-check-input filled-in" id="">
-                                <label class="form-check-label small text-uppercase card-link-secondary" for="">Online platba kartou</label>
-                            </div>
-                        </section>
-
-                        <button class="btn btn-primary mb-4">Pokračovať v objednávke</button>
-
                     </section>
                 </section>
             </div>
-
+            <?php $total = 0 ?>
+            @if(session('cart'))
+                @foreach(session('cart') as $id => $details)
+                    <?php $total += $details['price'] * $details['quantity'] ?>
+                @endforeach
+            @endif
             <div class="col-lg-4">
 
                 <div class="mb-3">
@@ -62,7 +63,7 @@
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item d-flex justify-content-between align-items-center px-0 pb-0">
                                 Celková suma (bez DPH)
-                                <span>25,00 €</span>
+                                <span>{{ $total * 0.8 }} €</span>
                             </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center px-0">
                                 Doprava
@@ -75,9 +76,12 @@
                                         <p class="mb-0">(s DPH)</p>
                                     </strong>
                                 </div>
-                                <span><strong>53,98 €</strong></span>
+                                <span><strong>{{ $total }} €</strong></span>
                             </li>
                         </ul>
+
+                        <button type="submit" onclick="window.location='{{ route('cart_2') }}'" class="btn btn-primary btn-block">Pokračovať k objednávke</button>
+                        </form>
                     </div>
                 </div>
 

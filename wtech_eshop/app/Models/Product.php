@@ -15,6 +15,10 @@ class Product extends Model
     {
         return $this->belongsTo('App\Models\Category');
     }
+    public function orders()
+    {
+        return $this->belongsToMany('App\Models\Order');
+    }
 
     public function presentPrice()
     {
