@@ -51,7 +51,7 @@ class OrderController extends Controller
         }
 
 
-        session()->flush();
+
         session()->forget('cart');
 
 

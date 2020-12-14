@@ -19,7 +19,41 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8ef57dc-dc1e-4a6e-8ee6-1c2f38dca937" name="Default Changelist" comment="" />
+    <list default="true" id="d8ef57dc-dc1e-4a6e-8ee6-1c2f38dca937" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ShopAccessController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ShopNtbController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Support/Collection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/shop_access.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/shop_access_gaming.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/shop_access_office.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/shop_ntb.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/shop_ntb_gaming.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/shop_ntb_office.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ShopController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ShopController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ShopPcController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ShopPcController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/OrdersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrdersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/scout.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/scout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_21_225017_create_products_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_26_000812_category_id_to_products.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_21_225017_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_21_225017_create_products_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_21_225137_create_category_product_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/ProductsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/ProductsTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home_page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home_page.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/partials/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/partials/navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/shop.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/shop.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/shop_cart_1.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/shop_cart_1.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/shop_pc.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/shop_pc.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/shop_pc_gaming.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/shop_pc_gaming.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/shop_pc_office.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/shop_pc_office.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/shop_product_detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/shop_product_detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/shop_user_orders.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/shop_user_orders.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,23 +82,23 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.EditorConfig" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="C:\Users\andre\OneDrive\Documents\STU_FIIT\SemEster_V\WT\WTECH20-main\wtech_eshop" />
       <recent name="C:\Users\andre\OneDrive\Documents\STU_FIIT\SemEster_V\WT\wtech_eshop\resources\views\layout\partials" />
       <recent name="C:\Users\andre\OneDrive\Documents\STU_FIIT\SemEster_V\WT\wtech_eshop\resources\views" />
       <recent name="C:\Users\andre\OneDrive\Documents\STU_FIIT\SemEster_V\WT\wtech_eshop\database\migrations" />
-      <recent name="C:\Users\andre\OneDrive\Documents\STU_FIIT\SemEster_V\WT\wtech_eshop\app\Http\Controllers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http/Controllers" />
       <recent name="C:\Users\andre\OneDrive\Documents\STU_FIIT\SemEster_V\WT\WTECH20-main\wtech_eshop\resources\views" />
       <recent name="C:\Users\andre\OneDrive\Documents\STU_FIIT\SemEster_V\WT\wtech_eshop\app\Models" />
       <recent name="C:\Users\andre\OneDrive\Documents\STU_FIIT\SemEster_V\WT\wtech_eshop\resources\views" />
       <recent name="C:\Users\andre\OneDrive\Documents\STU_FIIT\SemEster_V\WT\wtech_eshop\resources\views\layout" />
-      <recent name="C:\Users\andre\OneDrive\Documents\STU_FIIT\SemEster_V\WT\wtech_eshop\app" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -87,6 +121,8 @@
       <workItem from="1606352298088" duration="41000" />
       <workItem from="1606393780682" duration="17339000" />
       <workItem from="1606511705960" duration="997000" />
+      <workItem from="1607862592717" duration="1090000" />
+      <workItem from="1607863708395" duration="27520000" />
     </task>
     <servers />
   </component>
@@ -113,11 +149,12 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="705" y="342" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606065635147">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="940" y="456" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607865558747">
+      <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="705" y="342" key="#com.intellij.fileTypes.FileTypeChooser/-128.1080.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605916305302" />
     <state x="705" y="342" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1606065635147" />
+    <state x="940" y="456" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1440@0.0.2560.1440" timestamp="1607865558747" />
     <state width="1899" height="295" key="GridCell.Tab.0.bottom" timestamp="1606206995695">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -134,11 +171,12 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1899" height="295" key="GridCell.Tab.0.right/-128.1080.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1606206995695" />
-    <state x="0" y="188" key="SettingsEditor" timestamp="1606333138564">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="833" y="235" key="SettingsEditor" timestamp="1607867868449">
+      <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="0" y="188" key="SettingsEditor/-128.1080.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1606206987114" />
     <state x="0" y="188" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1606333138564" />
+    <state x="833" y="235" key="SettingsEditor/0.0.2560.1440@0.0.2560.1440" timestamp="1607867868449" />
     <state width="500" height="445" key="SwitcherDM" timestamp="1606180433944">
       <screen x="-1920" y="-180" width="1920" height="1080" />
     </state>

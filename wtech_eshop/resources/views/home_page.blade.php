@@ -48,7 +48,7 @@
                 <div class="row">
                     <div class="col align-self-end">
                         <img class="w-100"
-                                 src="https://zdnet4.cbsistatic.com/hub/i/r/2020/10/21/25999ae5-5538-41da-b025-eb44ce8b8c81/resize/1200xauto/b82044831c8ab0ed40a66911565aeb10/iphone-12-pro-max-blue-hero.png" alt="Sample">
+                                 src="https://www.mall.cz/i/39176092/550/550" alt="Sample">
                         <div class="text-center pt-4 ">
                             <h5>Produkt v zľave 1</h5>
                             <h6 class="mb-3">12,99 €</h6>
@@ -57,7 +57,7 @@
 
                     <div class="col align-self-end">
                         <img class="w-100"
-                             src="https://zdnet4.cbsistatic.com/hub/i/r/2020/10/21/25999ae5-5538-41da-b025-eb44ce8b8c81/resize/1200xauto/b82044831c8ab0ed40a66911565aeb10/iphone-12-pro-max-blue-hero.png" alt="Sample">
+                             src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp-spacegray-select-202011?wid=892&hei=820&&qlt=80&.v=1603406905000" alt="Sample">
                         <div class="text-center pt-4 ">
                             <h5>Produkt v zľave 2</h5>
                             <h6 class="mb-3">12,99 €</h6>
@@ -66,7 +66,7 @@
 
                     <div class="col align-self-end">
                         <img class="w-100"
-                             src="https://zdnet4.cbsistatic.com/hub/i/r/2020/10/21/25999ae5-5538-41da-b025-eb44ce8b8c81/resize/1200xauto/b82044831c8ab0ed40a66911565aeb10/iphone-12-pro-max-blue-hero.png" alt="Sample">
+                             src="https://www.mzone.sk/images/products/airpods-5-gallery.jpg" alt="Sample">
                         <div class="text-center pt-4">
                             <h5>Produkt v zľave 3</h5>
                             <h6 class="mb-3">1299 €</h6>
@@ -96,7 +96,7 @@
 
                     <div class="col align-self-end">
                         <img class="w-100"
-                             src="https://zdnet4.cbsistatic.com/hub/i/r/2020/10/21/25999ae5-5538-41da-b025-eb44ce8b8c81/resize/1200xauto/b82044831c8ab0ed40a66911565aeb10/iphone-12-pro-max-blue-hero.png" alt="Sample">
+                             src="https://www.mall.cz/i/39176092/550/550" alt="Sample">
                         <div class="text-center pt-4 ">
                             <h5>Produkt v zľave 6</h5>
                             <h6 class="mb-3">12,99 €</h6>
@@ -105,7 +105,7 @@
 
                     <div class="col align-self-end">
                         <img class="w-100"
-                             src="https://zdnet4.cbsistatic.com/hub/i/r/2020/10/21/25999ae5-5538-41da-b025-eb44ce8b8c81/resize/1200xauto/b82044831c8ab0ed40a66911565aeb10/iphone-12-pro-max-blue-hero.png" alt="Sample">
+                             src="https://www.mzone.sk/images/products/airpods-5-gallery.jpg" alt="Sample">
                         <div class="text-center pt-4">
                             <h5>Produkt v zľave 7</h5>
                              <h6 class="mb-3">12,99 €</h6>
@@ -114,7 +114,7 @@
 
                     <div class="col align-self-end">
                         <img class="w-100"
-                             src="https://zdnet4.cbsistatic.com/hub/i/r/2020/10/21/25999ae5-5538-41da-b025-eb44ce8b8c81/resize/1200xauto/b82044831c8ab0ed40a66911565aeb10/iphone-12-pro-max-blue-hero.png" alt="Sample">
+                             src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp-spacegray-select-202011?wid=892&hei=820&&qlt=80&.v=1603406905000" alt="Sample">
                         <div class="text-center pt-4">
                             <h5>Produkt v zľave 8</h5>
                             <h6 class="mb-3">12,99 €</h6>

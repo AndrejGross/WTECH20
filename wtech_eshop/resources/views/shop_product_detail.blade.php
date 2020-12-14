@@ -75,8 +75,8 @@
              <div class="table-responsive mb-2">
 
                 <button type="button" class="btn w-100 btn-primary btn-md" onclick="window.location='{{ route('cart-addshow', $product) }}'">Kúpiť</button>
-                                <button type="button" class="btn w-50 btn-light btn-md" onclick="window.location='{{ route('cart-add', $product) }}'"><i
-                                                                class="fa fa-shopping-cart pr-2"></i>Pridať do košíka</button>
+                                <button type="button" class="btn w-100 btn-light btn-md" onclick="window.location='{{ route('cart-add', $product) }}'"><i
+                                                      class="fa fa-shopping-cart pr-2"></i>Pridať do košíka</button>
             </div>
 
         </div>

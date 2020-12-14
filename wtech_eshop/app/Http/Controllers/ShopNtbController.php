@@ -8,7 +8,7 @@ use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Collection;
 
-class ShopPcController extends Controller
+class ShopNtbController extends Controller
 {
 
 public function paginate($items, $perPage = 8, $page = null, $options = [])
@@ -20,7 +20,7 @@ public function paginate($items, $perPage = 8, $page = null, $options = [])
 	return new LengthAwarePaginator($items->forPage($page, $perPage), $items->count(), $perPage, $page, $options);
 }
 
-     public function get_gaming_pc($id)
+     public function get_gaming_ntb($id)
      {
          $products = Product::where('category_id','=',$id)->where('type','=','herne')->simplePaginate(8);
 
@@ -31,7 +31,7 @@ public function paginate($items, $perPage = 8, $page = null, $options = [])
          }
 
          if (request('brand')){
-             $products = $products->where('category_id','=',$id)->where('type','=','herne')->where('brand', request('brand'));
+             $products = Product::where('category_id','=',$id)->where('type','=','herne')->where('brand', request('brand'));
              $products = $this->paginate($products, $perPage = 8, $page = null, $options = []);
          }
 
@@ -45,21 +45,21 @@ public function paginate($items, $perPage = 8, $page = null, $options = [])
              $products = $this->paginate($products, $perPage = 8, $page = null, $options = []);
          }
 
-         return view('shop_pc_gaming')->with(['products' => $products])->with(['id' => $id])->with(['category' => 'Počítače']);
+         return view('shop_ntb_gaming')->with(['products' => $products])->with(['id' => $id])->with(['category' => 'Notebooky']);
      }
 
-     public function get_office_pc($id)
+     public function get_office_ntb($id)
          {
              $products = Product::where('category_id','=',$id)->where('type','=','kancelarske')->simplePaginate(8);
 
-              if (request('sort') == 'low_high') {
-                  $products = Product::where('category_id','=',$id)->where('type','=','kancelarske')->orderBy('price')->simplePaginate(8);
+             if (request('sort') == 'low_high') {
+                    $products = Product::where('category_id','=',$id)->where('type','=','kancelarske')->orderBy('price')->simplePaginate(8);
               } elseif (request('sort') == 'high_low'){
-                  $products = Product::where('category_id','=',$id)->where('type','=','kancelarske')->orderBy('price', 'desc')->simplePaginate(8);
+                    $products = Product::where('category_id','=',$id)->where('type','=','kancelarske')->orderBy('price', 'desc')->simplePaginate(8);
               }
 
               if (request('brand')){
-                  $products = $products->where('category_id','=',$id)->where('type','=','kancelarske')->where('brand', request('brand'));
+                  $products = Product::where('category_id','=',$id)->where('type','=','kancelarske')->where('brand', request('brand'));
                   $products = $this->paginate($products, $perPage = 8, $page = null, $options = []);
               }
 
@@ -73,8 +73,7 @@ public function paginate($items, $perPage = 8, $page = null, $options = [])
                   $products = $this->paginate($products, $perPage = 8, $page = null, $options = []);
               }
 
-              return view('shop_pc_office')->with(['products' => $products])->with(['id' => $id])->with(['category' => 'Počítače']);
-
+              return view('shop_ntb_office')->with(['products' => $products])->with(['id' => $id])->with(['category' => 'Notebooky']);
          }
 
 }

@@ -87,10 +87,6 @@
                         @endforeach
                         @endif
 
-
-                        <p class="text-primary mb-0"><i class="fa fa-info-circle mr-1"></i> Do not delay the purchase, adding
-                            items to your cart does not mean booking them.</p>
-
                     </div>
                 </div>
 

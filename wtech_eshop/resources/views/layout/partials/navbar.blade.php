@@ -32,7 +32,7 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
                     @if(Auth::check())
-                        <a class="dropdown-item" href="">Objednávky</a>
+                        <a class="dropdown-item" href="{{ route('orders') }}">Objednávky</a>
 
                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                              document.getElementById('logout-form').submit();">{{ __('Odhlásenie') }}</a>

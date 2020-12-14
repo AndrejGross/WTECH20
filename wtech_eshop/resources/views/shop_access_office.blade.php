@@ -9,13 +9,13 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="#">Domov</a></li>
-                    <li class="breadcrumb-item"><a href="#">Počítače</a></li>
+                    <li class="breadcrumb-item"><a href="#">Príslušenstvo</a></li>
                     <li class="breadcrumb-item"><a href="#">Kancelárske</a></li>
                 </ol>
             </nav>
 
             <div class="jumbotron">
-                <h1 class="">Kancelárske počítače</h1>
+                <h1 class="">Kancelárske príslušenstvo</h1>
                 <hr class="">
                 <p>U nás predávame len tie najkvalitnejšie produkty, ktoré boli otestované špecialistami a uisťujeme sa, aby čo najviac vyhovovali naším zákazníkom.</p>
             </div>
@@ -30,8 +30,8 @@
                     <a href="#" class="text-reset float-left"><i class="fa fa-th-list fa-lg mr-1" data-toggle="collapse" data-target="#sidebar" aria-hidden="true" aria-expanded="false" aria-controls="sidebar" onclick="var that = this; setTimeout(function() {that.parentNode.style.flex = 'auto';that.parentNode.style['max-width'] = 'none';}, 2000);">Kategórie</i></a>
                     <label class="float-right">
                         <label>Zoradiť podľa</label>
-                        <button class="btn btn-primary" onclick="window.location='{{ route('shop-pc-office', [$id, 'sort' => 'high_low']) }}'" >Najdrahšie</button>
-                        <button class="btn btn-primary" onclick="window.location='{{ route('shop-pc-office', [$id, 'sort' => 'low_high']) }}'" >Najlacnejšie</button>
+                        <button class="btn btn-primary" onclick="window.location='{{ route('shop-access-office', [$id, 'sort' => 'high_low']) }}'" >Najdrahšie</button>
+                        <button class="btn btn-primary" onclick="window.location='{{ route('shop-access-office', [$id, 'sort' => 'low_high']) }}'" >Najlacnejšie</button>
                     </label>
                 </div>
 
@@ -47,7 +47,7 @@
                         <section>
                             <h5>Filtrovať</h5>
 
-                            <form method="GET" action="{{ route('shop-pc-office', $id)}}">
+                            <form method="GET" action="{{ route('shop-access-office', $id)}}">
                                 @csrf
                                 <section class="">
 

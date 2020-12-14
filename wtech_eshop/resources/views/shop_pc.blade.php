@@ -28,14 +28,11 @@
     <section>
         <div class="row">
             <div class="col text-center">
-                <a href="#" class="text-reset float-left"><i class="fa fa-th-list fa-lg mr-1" data-toggle="collapse" data-target="#sidebar2" aria-hidden="true" aria-expanded="false" aria-controls="sidebar" onclick="var that = this; setTimeout(function() {that.parentNode.style.flex = 'auto';that.parentNode.style['max-width'] = 'none';}, 2000);">Filtrovať</i></a>
+                <a href="#" class="text-reset float-left"><i class="fa fa-th-list fa-lg mr-1" data-toggle="collapse" data-target="#sidebar" aria-hidden="true" aria-expanded="false" aria-controls="sidebar" onclick="var that = this; setTimeout(function() {that.parentNode.style.flex = 'auto';that.parentNode.style['max-width'] = 'none';}, 2000);">Kategórie</i></a>
                 <label class="float-right">
                     <label>Zoradiť podľa</label>
-                    <select class="mdb-select md-outline md-form" searchable="Search here..">
-                        <option value="1">Najdrahšie</option>
-                        <option value="2">Najlacnejšie</option>
-                    </select>
-                    <button class="btn btn-primary">Zobraziť</button>
+                    <button class="btn btn-primary" onclick="window.location='{{ route('shop', [$id, 'sort' => 'high_low']) }}'" >Najdrahšie</button>
+                    <button class="btn btn-primary" onclick="window.location='{{ route('shop', [$id, 'sort' => 'low_high']) }}'" >Najlacnejšie</button>
                 </label>
             </div>
 
@@ -44,71 +41,53 @@
     <!--  !SORTING------------------------------------------------------------------------------------------------------------------------------------- !-->
 
     <!-- FILTER------------------------------------------------------------------------------------------------------------------------------------- !-->
-
     <div class="container position-absolute" style="z-index: 1;">
-        <div class="row">
-            <nav class="col-6 bg-secondary collapse text-white" id="sidebar2">
-                <section>
-                    <section>
-                        <section class="">
+            <div class="row">
+                <nav class="col-6 bg-secondary collapse" id="sidebar">
+                        <section>
+                            <h5>Filtrovať</h5>
 
-                            <h6 class="font-weight-bold">Stav produktu</h6>
+                            <form method="GET" action="{{ route('shop', $id)}}">
+                                @csrf
+                                <section class="">
 
-                            <div class="form-check pl-0 mb-3 ml-4">
-                                <input type="checkbox" class="form-check-input filled-in" id="new">
-                                <label class="form-check-label small text-uppercase card-link-secondary" for="new">Všetko</label>
-                            </div>
-                            <div class="form-check pl-0 mb-3 ml-4">
-                                <input type="checkbox" class="form-check-input filled-in" id="used">
-                                <label class="form-check-label small text-uppercase card-link-secondary" for="used">Nové</label>
-                            </div>
-                            <div class="form-check pl-0 mb-3 ml-4">
-                                <input type="checkbox" class="form-check-input filled-in" id="collectible">
-                                <label class="form-check-label small text-uppercase card-link-secondary" for="collectible">Použité</label>
-                            </div>
-                        </section>
+                                    <h6 class="font-weight-bold">Značka</h6>
+                                    <select class="mdb-select md-outline md-form w-50" name="brand">
+                                        <option value="" selected disabled hidden>Vyberte značku</option>
+                                        <option value="Asus">Asus</option>
+                                        <option value="Razer">Razer</option>
+                                    </select>
 
-                        <section class="">
+                                </section>
 
-                            <h6 class="font-weight-bold">Značka</h6>
-                            <select class="mdb-select md-outline md-form w-50" searchable="Search here..">
-                                <option value="1">Asus</option>
-                                <option value="2">Apple</option>
-                                <option value="3">Asus</option>
-                                <option value="4">Apple</option>
-                                <option value="5">Asus</option>
-                                <option value="6">Apple</option>
-                            </select>
+                                <section class="mb-4">
+                                    <h6 class="font-weight-bold mt-3">Cena</h6>
 
-                        </section>
+                                        <div class="">
+                                            <div class="md-form">
+                                                <label for="from">Od:</label>
+                                                <input id="from" type="text" class="form-control mb-0" name="price_from">
+                                            </div>
+                                            <div class="md-form md-outline my-0">
+                                                <label for="to">Do:</label>
+                                                <input id="to" type="text" class="form-control mb-0" name="price_to">
+                                            </div>
+                                        </div>
 
-                        <section class="">
-                            <h6 class="font-weight-bold mt-3">Cena</h6>
-                            <form>
-                                <div class="">
-                                    <div class="md-form">
-                                        <label for="from">Od:</label>
-                                        <input id="from" type="text" class="form-control mb-0">
-                                    </div>
-                                    <div class="md-form md-outline my-0">
-                                        <label for="to">Do:</label>
-                                        <input id="to" type="text" class="form-control mb-0">
-                                    </div>
-                                </div>
+                                </section>
+
+                                <button type="submit" class="btn btn-primary mb-4">Použiť</button>
+
                             </form>
                         </section>
+                </nav>
 
-                        <button class="btn btn-primary mb-4 mt-4">Použiť</button>
+                <div class="col-6 bg-dark">
 
-                    </section>
-                </section>
-            </nav>
-
-            <div class="col-6 bg-dark">
-
+                </div>
             </div>
         </div>
-    </div>
+
     <!-- !FILTER------------------------------------------------------------------------------------------------------------------------------------- !-->
 
     <div class="row">
@@ -122,7 +101,7 @@
 
             <div class="text-center">
                 <h5>{{$product->name}}</h5>
-                <p class="mb-2 text-muted text-uppercase small">{{$product->category_id}}</p>
+                <p class="mb-2 text-muted text-uppercase small">{{$category}}</p>
                 <p>
                     {{$product->description}}
                 </p>
@@ -138,8 +117,14 @@
 
 
     <!-- PAGINATION ------------------------------------------------------------------------------------------------------------------------------------- !-->
-    <div class="mx-auto">
-         {{ $products->onEachSide(5)->links() }}
-    </div>
+    <div class="container">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center my-4">
+                            <li class="page-item">
+                              {{ $products->render() }}
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
 
 @endsection
